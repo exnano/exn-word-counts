@@ -1,0 +1,49 @@
+{
+    "name": "exnano/exn-word-counts",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "description": "Display each post word counts in columns",
+    "homepage": "https://exnano.io",
+    "authors": [ {
+        "name": "Abdus Fauzi",
+        "homepage": "https://abdusfauzi.com"
+    } ],
+    "keywords": [
+        "wordpress",
+        "multisite",
+        "plugin"
+    ],
+    "support": {
+        "issues": "https://github.com/exnano/exn-word-counts/issues",
+        "forum": "https://github.com/exnano/exn-word-counts/discussions"
+    },
+    "repositories": [ {
+        "type": "vcs",
+        "url": "https://github.com/exnano/exn-word-counts"
+    } ],
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-update-cmd": [
+            "wp i18n make-pot . languages/exn-word-counts.pot --exclude='dist/,wp-plugins-svn/'"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "ExnanoCreative\\ExnWordCounts\\": "includes/src"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ],
+        "classmap": [
+            "includes/src"
+        ]
+    },
+    "config": {
+        "vendor-dir": "includes/vendor",
+        "optimize-autoloader": true
+    }
+}
