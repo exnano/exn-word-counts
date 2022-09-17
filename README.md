@@ -1,2 +1,1 @@
-== Description ==
-Display each post word counts in columns
+For WordPress Plugin: Display each post word counts in columns
